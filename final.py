@@ -34,7 +34,7 @@ x_train_vector = vectroizer.fit_transform(x_train)
 x_test_vector = vectroizer.transform(test_data['sentence'])
 
 #trains the model
-model = MLPClassifier(hidden_layer_sizes=(100, 25), max_iter=30, early_stopping=True, random_state=42)
+model = MLPClassifier(hidden_layer_sizes=(100, 10), max_iter=30, early_stopping=True, random_state=42, alpha=0.0001)
 model.fit(x_train_vector, y_train)
 
 #prediction from the test set
